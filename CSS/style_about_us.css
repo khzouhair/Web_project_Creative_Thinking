@@ -1,0 +1,29 @@
+body{
+    background-color: #f5dce6;
+}
+.modifie-margin{
+    margin-right: 20px;
+    color: #1D2549;
+
+}
+.btn-register{
+    background: linear-gradient(to right,#000000,#080780);
+    color: #FFFFFF;
+    width: 70vh;
+    margin: 40px;
+}
+.my-footer{
+    background-color: rgba(0, 0, 0, 0.05);
+
+}
+.footer-class{
+    padding-top: 10px;
+    
+}
+.btn-register:hover {
+    background: #B62A81;
+}
+
+
+
+

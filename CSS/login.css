@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #000000, #080780);
+  color: #000000;
+}
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  background: #EBEFF8;
+  box-shadow: 0 0 60px #807f7f;
+  border-radius: 20px;
+  padding: 40px;
+  overflow: hidden;
+}
+.wrapper:hover {
+  box-shadow: 0 0 60px #FF66C4 ;
+  animation: animate 1s linear infinite;
+}
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
+}
+.wrapper.active .form-wrapper.sign-in {
+  transform: translateY(-450px);
+}
+
+.wrapper .form-wrapper.sign-up {
+  position: absolute;
+  top: 450px;
+  left: 0;
+}
+.wrapper.active .form-wrapper.sign-up {
+  transform: translateY(-450px);
+}
+
+h1{
+  text-align: center;
+}
+
+.input-group {
+  position: relative;
+  margin: 30px 0;
+  border-bottom: 2px solid #000000;
+}
+.input-group  label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #000000;
+  pointer-events: none;
+  transition: .5s;
+}
+.input-group  input {
+  width: 320px;
+  height: 40px;
+  font-size: 16px;
+  color: #000000;
+  padding: 0 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.input-group  input:focus~label,
+.input-group  input:valid~label {
+  top: -5px;
+}
+button {
+  width: 50%; 
+  font-size: 18px; 
+  padding-top: 2px; 
+  padding-bottom: 2px; 
+  margin: 10px 0px; 
+  color:white"
+}
