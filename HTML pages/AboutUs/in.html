@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+
+    <style>
+        /* Custom CSS for centering the title */
+        .register-title {
+            text-align: center;
+            font-size: 2.5rem; /* Adjust font size as needed */
+            margin-top: 2rem; /* Adjust margin top as needed */
+            color: purple; /* Set title color to purple */
+        }
+        /* Custom CSS to set label and input color to purple */
+        input[type="text"] + label,
+        input[type="email"] + label,
+        input[type="password"] + label {
+            color: purple !important; /* Important to override Materialize default styles */
+        }
+        input[type="text"]:focus + label,
+        input[type="email"]:focus + label,
+        input[type="password"]:focus + label {
+            color: purple !important; /* Important to override Materialize default styles */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            border-bottom: 1px solid purple !important; /* Important to override Materialize default styles */
+            box-shadow: 0 1px 0 0 purple !important; /* Important to override Materialize default styles */
+            width: 80%; /* Adjust width as needed */
+        }
+        input[type="text"]:focus:not([readonly]),
+        input[type="email"]:focus:not([readonly]),
+        input[type="password"]:focus:not([readonly]) {
+            border-bottom: 1px solid purple !important; /* Important to override Materialize default styles */
+            box-shadow: 0 1px 0 0 purple !important; /* Important to override Materialize default styles */
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar" class="w-full pr-10 bg-gradient-to-r from-black to-color1">
+        <header class="w-full relative text-white">
+            <div class="flex justify-between items-center">
+                <a class="flex items-center w-1/5 relative" href="#">
+                    <img class="w-full img-logo" src="Logo1.png" alt="Logo">
+                    <h1 href="#" class="md:text-base text-sm lg:text-lg absolute left-2/3 ">CREATIVE THINKING</h1>
+                </a>
+                <nav class="md:flex justify-between items-center lg:space-x-8 lg:text-base md:text-sm md:space-x-4 md:absolute md:right-4 lg:right-12">
+                    <ul class="flex lg:space-x-8 md:space-x-3">
+                        <li>
+                            <a class="hover:underline" href="">OUR OFFER</a>
+                        </li>
+                        <li>
+                            <a class="hover:underline" href="">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a class="hover:underline" href="">CONTACT</a>
+                        </li>
+                        <li>
+                            <a class="underline hover:text-color2" href="">LOG IN</a>
+                        </li>
+                    </ul>
+                    <button class="bg-color1 text-color2 rounded-xl p-1 border-solid border-4 border-color2 hover:bg-color2 hover:text-white" type="button">GET STARTED</button>
+                </nav>
+                <nav></nav>
+                <button id="btn2" onclick="button1()" class="md:hidden bg-color1 text-color2 rounded-md p-1 border-solid border-2 border-color2 hover:bg-color2 hover:text-color1" type="button">-----</button>
+            </div>
+            <nav id="menu1" class="hidden md:hidden text-center bg-gray-200 py-2 px-4 mt-2 rounded absolute right-3 z-10">
+                <a href="#" class="block text-gray-800 hover:text-blue-500">OUR OFFER</a>
+                <a href="#" class="block text-gray-800 hover:text-blue-500">ABOUT US</a>
+                <a href="#" class="block text-gray-800 hover:text-blue-500">CONTACT</a>
+                <a href="#" class="block text-gray-800 hover:text-blue-500 underline">LOG IN</a>
+            </nav>
+        </header>
+    </div>
+    <div class="purple lighten-5"> <!-- Set body background color to light purple -->
+        <h1 class="register-title">REGISTER</h1>
+        <div class="row">
+            <form class="col s12 m8"> <!-- Set form width to medium (8 columns) -->
+                <div class="row">
+                    <div class="input-field col s12"> <!-- Set input field width to full width -->
+                        <input id="last_name" type="text" class="validate purple-input">
+                        <label for="last_name">Lastname</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12"> <!-- Set input field width to full width -->
+                        <input id="first_name" type="text" class="validate purple-input">
+                        <label for="first_name">Firstname</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12"> <!-- Set input field width to full width -->
+                        <input id="email" type="email" class="validate purple-input">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12"> <!-- Set input field width to full width -->
+                        <input id="password" type="password" class="validate purple-input">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12"> <!-- Set button width to full width -->
+                        <button class="btn waves-effect waves-light purple" type="submit" name="action">Register</button>
+                    </div>
+                </div>
+            </form>
+            <div class="col s12 m4"> <!-- Placeholder for picture, set width to medium (4 columns) -->
+                <img class="materialboxed" width="100%" src="../Pictures/picture3.png"> <!-- Adjust width as needed -->
+            </div>
+        </div>
+    </div>
+   

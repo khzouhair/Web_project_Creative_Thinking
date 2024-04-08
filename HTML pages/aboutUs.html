@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/style_about_us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              color0: '#EBEFF8',
+              color1: '#080780',
+              color2: '#FF66C4',
+              color3: 'rgb(255, 255, 255,0.1)',
+              color4: 'rgb(255, 255, 255,0.4)',
+              color5: '#B62A81',
+            }
+          }
+        }
+      }
+  </script>
+</head>
+<body>
+    <div id="navbar" class=" w-full pr-10 bg-gradient-to-r from-black to-color1">
+      <header class="w-full relative text-white">
+          <div class=" flex justify-between items-center">
+                <a class=" flex items-center w-1/5 relative hover:text-white" href="home.html" >
+                    <img class="w-full" src="../Pictures/Logo2.png" alt="Logo">
+                    <h1 href="#" class="md:text-base text-sm lg:text-lg absolute left-2/3">CREATIVE THINKING</h1>
+                </a>
+              <nav class="hidden md:flex justify-between items-center lg:space-x-8 lg:text-base md:text-sm md:space-x-4 md:absolute md:right-4 lg:right-12">
+                    <ul class="flex lg:space-x-8 md:space-x-3">
+                        <li>
+                            <a class="hover:underline hover:text-white" href="home.html">HOME</a>
+                        </li>
+                        <li>
+                            <a class="hover:underline hover:text-white" href="home.html #offer" target="_blank">OUR OFFER</a>
+                        </li>
+                        <li>
+                            <a class="hover:underline hover:text-white" href="home.html #footer">CONTACT</a>
+                        </li>
+                        <li>
+                            <a class="underline hover:text-color2" href="login.html" target="_blank">LOG IN</a>
+                        </li>
+                    </ul>
+                    <a href="home.html #register">
+                       <button class="bg-color1 text-color2 rounded-xl p-1 border-solid border-4 border-color2 hover:bg-color2 hover:text-white" type="button">GET STARTED</button>
+                    </a> 
+                </nav>
+              <button id="btn2" onclick="button1()" class="md:hidden bg-color1 text-color2 rounded-md p-1 border-solid border-2 border-color2 hover:bg-color2 hover:text-color1" type="button">-----</button>  
+            </div>
+            <nav id="menu1" class="hidden md:hidden text-center bg-gray-200 py-2 px-4 mt-2 rounded absolute right-3 z-10">
+              <a href="home.html" class="block text-gray-800 hover:text-blue-500">HOME</a>
+              <a href="home.html #offer" target="_blank" class="block text-gray-800 hover:text-blue-500">OUR OFFER</a>
+              <a href="home.html #footer" class="block text-gray-800 hover:text-blue-500">CONTACT</a>
+              <a href="login.html" target="_blank" class="block text-gray-800 hover:text-blue-500 underline">LOG IN</a>
+              <a href="home.html #register"  class="block text-gray-800 hover:text-blue-500 underline">GET STARTED</a>
+            </nav>
+      </header>
+    </div>
+  <!--div id="navbar" class=" w-full pr-10 bg-gradient-to-r from-black to-color1">
+    <header class="w-full relative text-white">
+        <div class=" flex justify-between items-center">
+              <a class=" flex items-center w-1/5 relative hover:text-white" href="home.html" >
+                  <img class="w-full img-logo" src="../Pictures/Logo.png" alt="Logo">
+                  <h1 class="md:text-base text-sm lg:text-lg absolute left-2/3 ">CREATIVE THINKING</h1>
+              </a>
+            <nav class=" md:flex justify-between items-center lg:space-x-8 lg:text-base md:text-sm md:space-x-4 md:absolute md:right-4 lg:right-12">
+                  <ul class="flex lg:space-x-8 md:space-x-3">
+                      <li>
+                          <a class="hover:underline text-white" href="home.html">HOME</a>
+                      </li>
+                      <li>
+                          <a class="hover:underline text-white" href="home.html #offer">OUR OFFER</a>
+                      </li>
+                      <li>
+                          <a class="hover:underline text-white" href="home.html #footer">CONTACT</a>
+                      </li>
+                      <li>
+                          <a class="underline hover:text-color2" href="login.html">LOG IN</a>
+                      </li>
+                  </ul>
+                  <button class="bg-color1 text-color2 rounded-xl p-1 border-solid border-4 border-color2 hover:bg-color2 hover:text-white" type="button">GET STARTED</button>
+            </nav>
+            <nav></nav>
+            <button id="btn2" onclick="button1()" class="md:hidden bg-color1 text-color2 rounded-md p-1 border-solid border-2 border-color2 hover:bg-color2 hover:text-color1" type="button">-----</button>  
+          </div>
+          <nav id="menu1" class="hidden md:hidden text-center bg-gray-200 py-2 px-4 mt-2 rounded absolute right-3 z-10">
+            <a href="home.html" class="block text-gray-800 hover:text-blue-500 ">Home</a>
+            <a href="#" class="block text-gray-800 hover:text-blue-500">OUR OFFER</a>
+            <a href="#" class="block text-gray-800 hover:text-blue-500">CONTACT</a>
+            <a href="#" class="block text-gray-800 hover:text-blue-500 underline">LOG IN</a>
+          </nav>
+    </header>
+  </div-->
+  <div class="container">
+    <div class="container">
+        <div class="row" style="width: 100%;padding: 60px;">
+            <img src="../Pictures/picture5.jpg" alt="" style="width:100%; height: 200px;" class="image-about-us">
+        </div>
+        <div class="row">
+            <p>Since 2024, [Name] has been committed to providing exceptional web solutions to help our clients stand out in an ever-evolving digital world. As experts in website creation, portfolio design, and WordPress site management, 
+                we combine creativity, technical expertise, and quality customer service to deliver outstanding results for every project.</p>
+        </div>
+        <div class="row">
+            <p>Since 2024, [Name] has been committed to providing exceptional web solutions to help our clients stand out in an ever-evolving digital world. As experts in website creation, portfolio design, and WordPress site management, 
+                we combine creativity, technical expertise, and quality customer service to deliver outstanding results for every project.</p>
+        </div>
+        <div class="row">
+            <p>Since 2024, [Name] has been committed to providing exceptional web solutions to help our clients stand out in an ever-evolving digital world. As experts in website creation, portfolio design, and WordPress site management, 
+                we combine creativity, technical expertise, and quality customer service to deliver outstanding results for every project.</p>
+        </div>
+        <div class="row">
+            <p>Since 2024, [Name] has been committed to providing exceptional web solutions to help our clients stand out in an ever-evolving digital world. As experts in website creation, portfolio design, and WordPress site management, 
+                we combine creativity, technical expertise, and quality customer service to deliver outstanding results for every project.</p>
+        </div>
+        <div class="row d-flex justify-content-center ">
+            <a href="#"><button class="btn btn-primary btn-register btn-lg">REGISTER NOW</button></a>
+        </div>
+
+    </div>
+  </div>
+<!-- Footer -->
+<div class="footer-class">
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted my-footer">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span> © 2024 CREATIVE THINKING: All rights reserved.</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div >
+        <a href="#" class="me-4 modifie-margin text-reset "><!--you can add name in the name of class and then you can modifie-->
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="me-4 modifie-margin text-reset  ">
+          <i class="fab fa-twitter"></i>
+        </a>
+
+        <a href="#" class="me-4 modifie-margin text-reset  ">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="me-4 modifie-margin text-reset ">
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+      </div>
+      <!-- Right -->
+    </section>
+  </footer>
+</div>
+<script src="../JavaScript/aboutUs.js"></script>
+</body>
+</html>

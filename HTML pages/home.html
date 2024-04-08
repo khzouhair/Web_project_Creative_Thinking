@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--link rel="stylesheet" href="../CSS/bootstrap.css"-->
+    <!-- Include Tailwind CSS from a CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Color configuration for Tailwind CSS -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                color0: '#EBEFF8',
+                color1: '#080780',
+                color2: '#FF66C4',
+                color3: 'rgb(255, 255, 255,0.1)',
+                color4: 'rgb(255, 255, 255,0.4)',
+                color5: '#B62A81',
+              }
+            }
+          }
+        }
+    </script> 
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script-->
+
+    <!-- Compiled and minified CSS ->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-Compiled and minified JavaScript >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script-->
+    <!--style>
+        /* Custom CSS for centering the title */
+        .register-title {
+            text-align: center;
+            font-size: 2.5rem; /* Adjust font size as needed */
+            margin-top: 2rem; /* Adjust margin top as needed */
+            color: purple; /* Set title color to purple */
+        }
+        /* Custom CSS to set label and input color to purple */
+        input[type="text"] + label,
+        input[type="email"] + label,
+        input[type="password"] + label {
+            color: purple !important; /* Important to override Materialize default styles */
+        }
+        input[type="text"]:focus + label,
+        input[type="email"]:focus + label,
+        input[type="password"]:focus + label {
+            color: purple !important; /* Important to override Materialize default styles */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            border-bottom: 1px solid purple !important; /* Important to override Materialize default styles */
+            box-shadow: 0 1px 0 0 purple !important; /* Important to override Materialize default styles */
+            width: 80%; /* Adjust width as needed */
+        }
+        input[type="text"]:focus:not([readonly]),
+        input[type="email"]:focus:not([readonly]),
+        input[type="password"]:focus:not([readonly]) {
+            border-bottom: 1px solid purple !important; /* Important to override Materialize default styles */
+            box-shadow: 0 1px 0 0 purple !important; /* Important to override Materialize default styles */
+        }
+    </style-->
+</head>
+<body>
+    <!--div class="content flex flex-column justify-center items-center h-screen overflow-hidden bg-gradient-to-r from-black to-color1" style="color: aliceblue;">
+        <div class= "flex flex-col items-center lg:pb-5 relative font-serif w-4/5 h-4/5 pr-20 rounded-xl backdrop-opacity-5 backdrop-invert bg-gradient-to-r from-color2/10 via-black/10 to-white/10 shadow-2xl">
+            <header class="full relative">
+                <div class="flex justify-between items-center pt-33">
+                    <! Logo and page title >
+                    <a class="flex items-center md:w-1/4 w-1/3 relative" href="#" >
+                        <img class="full pt-3" src="../Pictures/Logo2.png" alt="Logo">
+                        <h1 href="#" class="md:text-base text-sm lg:text-lg absolute left-2/3">OUR OFFER</h1>
+                    </a>
+                    <! Navigation menu >
+                    <nav class="hidden md:flex justify-between items-center lg:space-x-8 lg:text-base md:text-sm md:space-x-4 md:absolute md:right-4 lg:right-12">
+                        <ul class="flex lg:space-x-8 md:space-x-3">
+                            <li>
+                                <a class="hover:underline" href="">OUR OFFER</a>
+                            </li>
+                            <li>
+                                <a class="hover:underline" href="">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a class="hover:underline" href="">CONTACT</a>
+                            </li>
+                            <li>
+                                <a class="underline hover:text-color2" href="login.html" target="_blank">LOG IN</a>
+                            </li>
+                        </ul>
+                        <button class="bg-color1 text-color2 rounded-xl p-1 border-solid border-4 border-color2 hover:bg-color2 hover:text-white" type="button">GET STARTED</button>
+                    </nav>
+                    <! Menu button for mobile devices >
+                    <button id="btn1" onclick="button1()" class="md:hidden bg-color1 text-color2 rounded-md p-1 border-solid border-2 border-color2 hover:bg-color2 hover:text-color1" type="button">-----</button>  
+                  </div>
+                  <! Drop-down menu for mobile devices ->
+                  <nav id="menu" class="hidden text-center bg-gray-200 py-2 px-4 mt-2 rounded absolute right-3 z-10">
+                    <a href="#" class="block text-gray-800 hover:text-blue-500">OUR OFFER</a>
+                    <a href="#" class="block text-gray-800 hover:text-blue-500">ABOUT US</a>
+                    <a href="#" class="block text-gray-800 hover:text-blue-500">CONTACT</a>
+                    <a href="#" class="block text-gray-800 hover:text-blue-500 underline">LOG IN</a>
+                  </nav>
+            </header>
+            <div class="flex relative w-full h-3/5 lg:mt-2  md:mt-6">
+                < Logo and main text ->
+                <img class="hidden md:flex w-3/5 pt-4 lg:pl-20" src="../Pictures/Logo1.png" alt="Logo">
+                <div class="text-color2 md:mt-8 mt-8 lg:ml-3 ">
+                    <pre class="font-serif lg:mt-3 lg:ml-6 md:text-7xl text-6xl  tracking-wide absolute md:left-1/2 left-1/4 " >We do <span class="text-white">IT</span>
+       right.
+    <button  id="btn" type="button" class="bg-color5 text-white text-2xl font-sans font-bold ml-6 mt-10  p-3 pl-5 pr-5 lg:py-2 hover:bg-color2 shadow-2xl ">START TODAY</button>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div-->
+    <div class="content flex flex-column justify-center items-center h-screen overflow-hidden bg-gradient-to-r from-black to-color1" style="color: aliceblue;">
+        <div class= "flex flex-col items-center lg:pb-5 relative font-serif w-4/5 h-4/5 pr-20 rounded-xl backdrop-opacity-5 backdrop-invert bg-gradient-to-r from-color2/10 via-black/10 to-white/10 shadow-2xl">
+            <header class="w-full relative">
+                <div class=" flex justify-between items-center pt-33">
+                    <!-- Logo and page title -->
+                    <a class=" flex items-center md:w-1/4 w-1/3 relative" href="#" >
+                        <img class="w-full pt-3" src="../Pictures/Logo2.png" alt="Logo">
+                        <h1 href="home.html" class="md:text-base text-sm lg:text-lg absolute left-2/3">CREATIVE THINKING</h1>
+                    </a>
+                    <!-- Navigation menu -->
+                    <nav class="hidden md:flex justify-between items-center lg:space-x-8 lg:text-base md:text-sm md:space-x-4 md:absolute md:right-4 lg:right-12">
+                        <ul class="flex lg:space-x-8 md:space-x-3">
+                            <li>
+                                <a class="hover:underline" href="#offer">OUR OFFER</a>
+                            </li>
+                            <li>
+                                <a class="hover:underline" href="aboutUs.html" target="_blank">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a class="hover:underline" href="#footer">CONTACT</a>
+                            </li>
+                            <li>
+                                <a class="underline hover:text-color2" href="login.html" target="_blank">LOG IN</a>
+                            </li>
+                        </ul>
+                        <a href="#register">
+                           <button class="bg-color1 text-color2 rounded-xl p-1 border-solid border-4 border-color2 hover:bg-color2 hover:text-white" type="button">GET STARTED</button>
+                        </a>
+                    </nav>
+                    <!-- Menu button for mobile devices -->
+                    <button id="btn1" onclick="button1()" class="md:hidden bg-color1 text-color2 rounded-md p-1 border-solid border-2 border-color2 hover:bg-color2 hover:text-color1" type="button">-----</button>  
+                </div>
+                  <!-- Drop-down menu for mobile devices -->
+                  <nav id="menu" class="hidden md:hidden text-center bg-gray-200 py-2 px-4 mt-2 rounded absolute right-3 z-10">
+                    <a href="#offer" class="block text-gray-800 hover:text-blue-500">OUR OFFER</a>
+                    <a href="aboutUs.html" target="_blank" class="block text-gray-800 hover:text-blue-500">ABOUT US</a>
+                    <a href="#footer" class="block text-gray-800 hover:text-blue-500">CONTACT</a>
+                    <a href="login.html" target="_blank" class="block text-gray-800 hover:text-blue-500 underline">LOG IN</a>
+                  </nav>
+            </header>
+            <div class="flex relative w-full h-3/5 lg:mt-2  md:mt-6">
+                <!-- Logo and main text -->
+                <img class="hidden md:flex w-3/5 pt-4 lg:pl-20" src="../Pictures/Logo1.png" alt="Logo">
+                <div class="text-color2 md:mt-8 mt-8 lg:ml-3 ">
+                    <pre class="font-serif lg:mt-3 lg:ml-6 md:text-7xl text-6xl  tracking-wide absolute md:left-1/2 left-1/4 " >We do <span class="text-white">IT</span>
+    right.
+ <button  id="btn" type="button" class="bg-color5 text-white text-2xl font-sans font-bold ml-6 mt-10  p-3 pl-5 pr-5 mr-30 lg:py-2 hover:bg-color2 shadow-2xl ">START TODAY</button>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="floatingPage">
+        <div id="navbar" class="hidden w-full pr-10 bg-gradient-to-r from-black to-color1">
+          <header class="w-full relative text-white">
+              <div class=" flex justify-between items-center">
+                    <a class=" flex items-center w-1/5 relative" href="#" >
+                        <img class="w-full" src="../Pictures/Logo2.png" alt="Logo">
+                        <h1 href="#" class="md:text-base text-sm lg:text-lg absolute left-2/3">CREATIVE THINKING</h1>
+                    </a>
+                  <nav class="hidden md:flex justify-between items-center lg:space-x-8 lg:text-base md:text-sm md:space-x-4 md:absolute md:right-4 lg:right-12">
+                        <ul class="flex lg:space-x-8 md:space-x-3">
+                            <li>
+                                <a class="hover:underline" href="#offer">OUR OFFER</a>
+                            </li>
+                            <li>
+                                <a class="hover:underline" href="aboutUs.html" target="_blank">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a class="hover:underline" href="#footer">CONTACT</a>
+                            </li>
+                            <li>
+                                <a class="underline hover:text-color2" href="login.html" target="_blank">LOG IN</a>
+                            </li>
+                        </ul>
+                        <a href="#register">
+                           <button class="bg-color1 text-color2 rounded-xl p-1 border-solid border-4 border-color2 hover:bg-color2 hover:text-white" type="button">GET STARTED</button>
+                        </a> 
+                    </nav>
+                  <button id="btn2" onclick="button1()" class="md:hidden bg-color1 text-color2 rounded-md p-1 border-solid border-2 border-color2 hover:bg-color2 hover:text-color1" type="button">-----</button>  
+                </div>
+                <nav id="menu1" class="hidden md:hidden text-center bg-gray-200 py-2 px-4 mt-2 rounded absolute right-3 z-10">
+                  <a href="#offer" class="block text-gray-800 hover:text-blue-500">OUR OFFER</a>
+                  <a href="aboutUs.html" target="_blank" class="block text-gray-800 hover:text-blue-500">ABOUT US</a>
+                  <a href="#footer" class="block text-gray-800 hover:text-blue-500">CONTACT</a>
+                  <a href="login.html" target="_blank" class="block text-gray-800 hover:text-blue-500 underline">LOG IN</a>
+                  <a href="#register"  class="block text-gray-800 hover:text-blue-500 underline">GET STARTED</a>
+                </nav>
+          </header>
+        </div>
+        <!-- Floating section content -->
+        <div id="offer" class="text-center pt-10 pb-10 bg-color0">
+            <p class="text-4xl md:text-5xl text-color1">What We Offer</p>
+            <div class="flex flex-col items-center md:flex-row md:justify-evenly px-10 py-12">
+                <!-- Map 1 -->
+                <div class="flex flex-col md:w-1/4 shadow-xl hover:shadow-2xl mb-12 md:mb-0">
+                   <img class="pb-6" src="../Pictures/picture.png" alt="">
+                   <a href="#" class="text-2xl pb-5 hover:text-color1 hover:underline">Web site</a>
+                </div>
+                <!-- Map 2 -->
+                <div class="flex flex-col md:w-1/4 shadow-xl hover:shadow-2xl mb-12 md:mb-0">
+                  <img class="pb-6" src="../Pictures/picture1.png" alt="">
+                  <a href="#" class="text-2xl pb-5 hover:text-color1 hover:underline">Portfolio</a>
+               </div>
+               <!-- Map 3 -->
+               <div class="flex flex-col md:w-1/4 shadow-xl hover:shadow-2xl mb-12 md:mb-0">
+                  <img class="pb-6" src="../Pictures/picture2.png" alt="">
+                  <a href="#" class="text-2xl pb-5 hover:text-color1 hover:underline">WordPess</a>
+               </div>
+            </div> 
+        </div>
+        <hr class="bg-[#D5D8D4] h-1"> 
+        <div class="flex flex-col items-center text-center pt-10 pb-10 bg-color0">
+            <p class="text-4xl md:text-5xl text-color1 mb-3">What Our Clients Say</p>
+            <div id="client" class="flex flex-col items-center  md:justify-evenly px-10 py-12">
+                <!-- Map 1 -->
+                <div class="flex flex-col items-center md:w-2/3 shadow-xl hover:shadow-2xl mb-12 md:mb-0">
+                    <img class="w-1/3" src="../Pictures/picture5.png" alt="">
+                    <div class="flex flex-row justify-around pb-3 pt-3">
+                       <p class="text-xl p-3 text-center">Lorem ipsum sit amet consectetur adipisicing consectetur elit. Sunt, natus.<br><span class="text-[#061BB0]">Khadija Zouhair</span> </p>
+                    </div>
+                </div>
+            </div> 
+            <div id="register" class="flex flex-row justify-evenly w-1/12" >
+                <div class="h-4 w-4 bg-[#061BB0] hover:cursor-pointer" id="link1" onclick="nextClient()"></div>
+                <div class="h-4 w-4 bg-[#B62A81] hover:cursor-pointer" id="link2" onclick="nextClient()"></div>
+                <div  class="h-4 w-4 bg-black hover:cursor-pointer" id="link3" onclick="nextClient()"></div>
+            </div>
+        </div> 
+        <hr class="bg-[#D5D8D4] h-1"> 
+</div>
+<!-- Form -->
+<div class="flex flex-col justify-center items-center bg-gradient-to-r from-black to-color1 pb-10">
+    <div class="bg-white w-2/3 shadow-lg mt-10 flex flex-row">
+        <div class="container   flex flex-row justify-center items-center pt-10 pb-10 bg-color0">
+            <form class="w-2/3">
+                <p class="text-3xl text-center text-color1">Register</p>
+                <div class="mb-3">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required class="block mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none  focus:border-indigo-500 sm:text-sm">
+                </div>
+                <div class="mb-3">   
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required class="block mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none  focus:border-indigo-500 sm:text-sm">     
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="block text-sm font-medium text-gray-700">Email address</label>
+                    <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" class="block mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 sm:text-sm">
+                    <p id="emailHelp" class="mt-2 text-sm text-gray-500">We'll never share your email with anyone else.</p>
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="block text-sm font-medium text-gray-700">Password</label>
+                  <input type="password" id="exampleInputPassword1" placeholder="Password" class="block mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none  focus:border-indigo-500 sm:text-sm">
+                </div>
+                <div class="mb-3 flex items-center">
+                  <input type="checkbox" id="exampleCheck1"
+                         class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out">
+                  <label for="exampleCheck1" class="ml-2 block text-sm text-gray-900">Check me out</label>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-black to-color1 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+            </form>
+            <!--div class="">
+            <img src="../Pictures/picture3.png" alt="" class=" w-full ml-2 " > 
+           </div-->
+        </div>
+    </div>     
+</div>
+<!-- Footer -->
+<footer id="footer" class="text-center text-white lg:text-left">
+  <div class="bg-gradient-to-r from-black to-color1 flex items-center justify-center  p-6 lg:justify-around">
+    <div class="me-12 hidden lg:block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Social network icons container -->
+    <div class="flex justify-center">
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="white"
+          viewBox="0 0 320 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4 ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="white"
+          viewBox="0 0 512 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="white"
+          viewBox="0 0 488 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="white"
+          viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="white"
+          viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+        </svg>
+      </a>
+      <a href="#!" class="[&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="white"
+          viewBox="0 0 496 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <!--Copyright section-->
+  <div class="bg-black/5 p-6 text-center text-black">
+    <span>© 2024 Copyright:</span>
+    <a class="font-semibold" href="https://tw-elements.com/">CREATIVE THINKING</a>
+  </div>
+</footer>
+<!-- Include external JavaScript script -->
+<script src="../JavaScript/home.js"></script>      
+</body>
+</html>
